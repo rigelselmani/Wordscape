@@ -1,8 +1,36 @@
 header{
     background-color: aliceblue;
-}
-.navImage{
     padding:0;
-    width:280px;
-    height:100px;
+}
+.head-img{
+    height:120px;
+    width:400px;
+}
+form{
+   background-color: #0000ff;
+   margin:0 auto;
+   text-align: center;
+}
+input{
+    padding:7px;
+    background-color: rgb(241, 238, 234);
+    width:300px;
+    margin:100px 10px 70px 10px;
+}
+button{
+    padding:7px;
+    width:110px;
+    background-color: none;
+}
+.definition{
+   margin: 50px 50px 30px 230px;
+   width:20%;
+   height:300px;
+   text-align: center;
+}
+h2{
+   background-color: gainsboro;
+   height:70px;
+   width:80%;
+   padding-top:14px
 }
