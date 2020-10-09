@@ -4,9 +4,14 @@ import Search from "./Search";
 import Definition from "./Definition"
 
 function App() {
+  
+
+  function handleWord(words){
+     console.log(words)
+  }
   return <div>
             <Header />
-            <Search />
+            <Search onAdd={handleWord}/>
             <Definition />
          </div>
 }
