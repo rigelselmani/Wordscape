@@ -1,3 +1,6 @@
+body{
+    background-color: #ecf0f1;
+}
 header{
     background-color: aliceblue;
     padding:0;
@@ -7,15 +10,18 @@ header{
     width:400px;
 }
 form{
-   background-color: #0000ff;
-   margin:0 auto;
-   text-align: center;
+    background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height:320px;
+    margin:0 auto;
+    text-align: center;
 }
 input{
     padding:7px;
     background-color: rgb(241, 238, 234);
-    width:300px;
-    margin:100px 10px 70px 10px;
+    width:380px;
+    margin:140px 10px 100px 0;
 }
 button{
     padding:7px;
@@ -23,8 +29,8 @@ button{
     background-color: none;
 }
 .definition{
-   margin: 50px 30px 10px 150px;
-   width:20%;
+   margin: 50px 10px 10px 10px;
+   width:30%;
    height:300px;
    text-align: center;
    display: inline-block;
@@ -36,6 +42,12 @@ h2{
    padding-top:14px
 }
 .space{
-   border:1px solid grey;
    padding:5px;
+   height:150px;
+   margin-top:20px;
+   background-color: white;
+}
+img{
+   height:150px;
+   width:100%;
 }

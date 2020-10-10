@@ -3,6 +3,7 @@ import Header from "./Header"
 import Search from "./Search";
 import Definition from "./Definition";
 import Image from "./Image";
+import Pronunce from "./Pronunciation";
 
 function App(props) {
   
@@ -14,8 +15,11 @@ function App(props) {
   return <div>
             <Header />
             <Search onAdd={handleWord}/>
+          <div className="container">
             <Definition addText={text}/>
-            <Image />
+            <Image addImg={text}/>
+            <Pronunce />
+          </div>
          </div>
 }
 
