@@ -23,10 +23,11 @@ button{
     background-color: none;
 }
 .definition{
-   margin: 50px 50px 30px 230px;
+   margin: 50px 30px 10px 150px;
    width:20%;
    height:300px;
    text-align: center;
+   display: inline-block;
 }
 h2{
    background-color: gainsboro;
@@ -34,7 +35,7 @@ h2{
    width:100%;
    padding-top:14px
 }
-.textSpace{
+.space{
    border:1px solid grey;
    padding:5px;
 }

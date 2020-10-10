@@ -13,7 +13,7 @@ function Search(props){
         event.preventDefault()
     }
     return <form>
-              <input onChange={handleChange} type="text" placeholder="Search"/>
+              <input onChange={handleChange}type="text" placeholder="Search"/>
               <button onClick={handleClick}>Search</button>
            </form>
 }

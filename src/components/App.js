@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Header from "./Header"
 import Search from "./Search";
-import Definition from "./Definition"
+import Definition from "./Definition";
+import Image from "./Image";
 
 function App(props) {
   
@@ -14,6 +15,7 @@ function App(props) {
             <Header />
             <Search onAdd={handleWord}/>
             <Definition addText={text}/>
+            <Image />
          </div>
 }
 

@@ -14,7 +14,7 @@ function Definition(props){
 
     return <div className="definition">
              <h2>Definition</h2>
-             <div className="textSpace">
+             <div className="space">
                <p>{define}</p>
              </div>
            </div>
