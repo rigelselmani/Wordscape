@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from "./Header"
 import Search from "./Search";
 import Definition from "./Definition"
 
-function App() {
+function App(props) {
   
-
+  const [text,setText]=useState();
+    
   function handleWord(words){
-     console.log(words)
+     setText(words)
   }
   return <div>
             <Header />
             <Search onAdd={handleWord}/>
-            <Definition />
+            <Definition addText={text}/>
          </div>
 }
 
