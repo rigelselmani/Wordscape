@@ -9,8 +9,8 @@ function Pronunce(props){
   .then(jsonResponse =>{
   
   if(jsonResponse[0] ===undefined){
-   const writtenPron= jsonResponse[0].hwi.prs[0]+"Try"
-   const file="Try"
+   const writtenPron=jsonResponse[0].hwi.prs[0]+"try"
+   const file="try"
      // Logic for subdirectory in order to create url
    var uniChar = file.slice(0,1);
    var biChar = file.slice(0,2);

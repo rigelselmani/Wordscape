@@ -8,7 +8,7 @@ function Definition(props){
     .then(response => response.json())
     .then(jsonResponse =>{
       if(jsonResponse[0]===undefined){
-        return setDefine("search")
+        return setDefine("Try Again")
       }else{
         return setDefine(jsonResponse[0].meanings[0].definitions[0].definition)
       }
