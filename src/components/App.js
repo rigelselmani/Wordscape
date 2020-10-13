@@ -18,7 +18,7 @@ function App(props) {
           <div className="container">
             <Definition addText={text}/>
             <Image addImg={text}/>
-            <Pronunce />
+            <Pronunce addWord={text}/>
           </div>
          </div>
 }
