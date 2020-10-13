@@ -8,9 +8,10 @@ function Pronunce(props){
   .then(response=> response.json())
   .then(jsonResponse =>{
   
-   var writtenPron= jsonResponse[0].hwi.prs[0].mw;
-   var file = jsonResponse[0].hwi.prs[0].sound.audio;
-   // Logic for subdirectory in order to create url
+  if(jsonResponse[0] ===undefined){
+   const writtenPron= jsonResponse[0].hwi.prs[0]+"Try"
+   const file="Try"
+     // Logic for subdirectory in order to create url
    var uniChar = file.slice(0,1);
    var biChar = file.slice(0,2);
    var triChar = file.slice(0,3);
@@ -26,18 +27,49 @@ function Pronunce(props){
        subDir = "number";
    }
 
-   function alphabetic(inputtxt) {
-    var letters = /^[a-zA-Z]+$/;
-    if ((inputtxt.match(letters))) {
-        return true;
-    } else {
-        return false; 
+    function alphabetic(inputtxt) {
+      var letters = /^[a-zA-Z]+$/;
+      if ((inputtxt.match(letters))) {
+          return true;
+      } else {
+          return false; 
+      }
     }
-}
-   var url = "https://media.merriam-webster.com/soundc11/" + subDir + "/" + file + ".wav";
+    var url = "https://media.merriam-webster.com/soundc11/" + subDir + "/" + file + ".wav";
+    setWritenP(writtenPron)
+    setPronounce(url)
+  }else{
+    var writtenPron= jsonResponse[0].hwi.prs[0].mw;
+    var file = jsonResponse[0].hwi.prs[0].sound.audio;
+
+    var uniChar = file.slice(0,1);
+    var biChar = file.slice(0,2);
+    var triChar = file.slice(0,3);
+    var subDir = "";
+ 
+    if (triChar === "bix") {
+        subDir = "bix";
+    } else if (biChar === "gg") {
+        subDir = "gg";
+    } else if (alphabetic(uniChar) === true) {
+        subDir = uniChar;
+    } else {
+        subDir = "number";
+    }
+ 
+     function alphabetic(inputtxt) {
+       var letters = /^[a-zA-Z]+$/;
+       if ((inputtxt.match(letters))) {
+           return true;
+       } else {
+           return false; 
+       }
+     }
+    var url = "https://media.merriam-webster.com/soundc11/" + subDir + "/" + file + ".wav";
   
-  setWritenP(writtenPron)
-  setPronounce(url)
+    setWritenP(writtenPron)
+    setPronounce(url)
+  }
   })
 
     return <div className="definition">

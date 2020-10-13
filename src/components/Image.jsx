@@ -7,8 +7,12 @@ function ImageDisplay(props){
     fetch("https://pixabay.com/api/?key=11051593-a4e6d6adfc2d65d6b9612b399&q&q="+props.addImg+"&")
     .then(response=> response.json())
     .then(jsonResponse =>{
-      const image=jsonResponse.hits[0].largeImageURL;
-      setNewImage(image)
+
+      if(jsonResponse.hits[0]===undefined){
+       setNewImage("http://www.risingabovereallife.com/wp-content/uploads/2012/04/20110908-b_3531023.jpg")
+      }else{
+       setNewImage(jsonResponse.hits[0].largeImageURL)
+      }
     })
 
     return <div className="definition">

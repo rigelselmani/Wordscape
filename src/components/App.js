@@ -5,7 +5,7 @@ import Definition from "./Definition";
 import Image from "./Image";
 import Pronunce from "./Pronunciation";
 
-function App(props) {
+function App() {
   
   const [text,setText]=useState();
     

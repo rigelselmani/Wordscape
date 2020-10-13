@@ -4,12 +4,16 @@ function Search(props){
     const [word,setWord]=useState();
     function handleChange(event){
         const newWord=event.target.value
-        setWord(newWord)
+        if(newWord===undefined){
+            setWord("hello")
+        }else{
+            setWord(newWord)
+        }
     }
 
     function handleClick(event){
         props.onAdd(word);
-        setWord("")
+     
         event.preventDefault()
     }
     return <form>

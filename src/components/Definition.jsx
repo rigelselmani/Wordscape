@@ -7,8 +7,11 @@ function Definition(props){
     fetch("https://api.dictionaryapi.dev/api/v2/entries/en/"+props.addText)
     .then(response => response.json())
     .then(jsonResponse =>{
-      const define =jsonResponse[0].meanings[0].definitions[0].definition
-      setDefine(define)
+      if(jsonResponse[0]===undefined){
+        return setDefine("search")
+      }else{
+        return setDefine(jsonResponse[0].meanings[0].definitions[0].definition)
+      }
     })
      
 
