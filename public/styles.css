@@ -28,32 +28,37 @@ button{
     width:110px;
     background-color: none;
 }
+.container{
+    width:80%;
+    margin: 0 auto;
+}
 .definition{
-   margin: 50px 10px 10px 10px;
+   margin: 5% 1.6% 5% 1.6%;
    width:30%;
    height:300px;
    text-align: center;
-   display: inline-block;
+   float:left;
 }
-h2{
+.displayHead{
    background-color: gainsboro;
    height:70px;
    width:100%;
    padding-top:14px
 }
-.space{
-   padding:5px;
-   height:150px;
-   margin-top:20px;
+.pronounce{
+   padding:5% 0% 3% 0%;
+   height:180px;
+   width:100%;
    background-color: white;
 }
 img{
-   height:150px;
+   padding:5% 0% 3% 0%;
+   height:180px;
    width:100%;
 }
-.play-text{
-    margin-top: 20px;
-}
-.play{
-    margin-top:25px;
+.define{
+   padding:5% 0% 3% 0%;
+   background-color: white;
+   height:180px;
+   width:100%;
 }

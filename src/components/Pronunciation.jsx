@@ -9,7 +9,7 @@ function Pronunce(props){
   .then(response=> response.json())
   .then(jsonResponse =>{
   
-  if(jsonResponse[0]===undefined||jsonResponse[0].hwi===undefined||jsonResponse[0]===[]||jsonResponse[0].hwi.prs[0].sound===undefined){
+  if(jsonResponse[0]==={}||jsonResponse[0]===undefined||jsonResponse[0].hwi===undefined||jsonResponse[0].hwi.prs[0].sound===undefined){
    const writtenPron=""
      // Logic for subdirectory in order to create url
 
@@ -50,10 +50,10 @@ function Pronunce(props){
   })
 
     return <div className="definition">
-             <h2>Sound • word</h2>
-             <div className="space">
+             <h2 className="displayHead">Sound • word</h2>
+             <div className="pronounce">
                 <p>{writenP}</p>
-                <audio id="embed_player" src={pronounce} autostart="false" controls="true"></audio>
+                <audio className="play" id="embed_player" src={pronounce} autostart="false" controls="true"></audio>
              </div>
            </div>
 }
