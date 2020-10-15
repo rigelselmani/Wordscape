@@ -9,7 +9,7 @@ function ImageDisplay(props){
     .then(jsonResponse =>{
 
       if(jsonResponse.hits[0]===undefined){
-       setNewImage("http://www.risingabovereallife.com/wp-content/uploads/2012/04/20110908-b_3531023.jpg")
+       setNewImage("")
       }else{
        setNewImage(jsonResponse.hits[0].largeImageURL)
       }
