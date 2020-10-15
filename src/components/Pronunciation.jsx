@@ -8,40 +8,17 @@ function Pronunce(props){
   .then(response=> response.json())
   .then(jsonResponse =>{
   
-  if(jsonResponse[0] ===undefined){
-   const writtenPron=jsonResponse[0].hwi.prs[0]+"try"
-   const file="try"
+  if(jsonResponse[0]===undefined||jsonResponse[0].hwi===undefined){
+   const writtenPron="try Again"
      // Logic for subdirectory in order to create url
-   var uniChar = file.slice(0,1);
-   var biChar = file.slice(0,2);
-   var triChar = file.slice(0,3);
-   var subDir = "";
 
-   if (triChar === "bix") {
-       subDir = "bix";
-   } else if (biChar === "gg") {
-       subDir = "gg";
-   } else if (alphabetic(uniChar) === true) {
-       subDir = uniChar;
-   } else {
-       subDir = "number";
-   }
-
-    function alphabetic(inputtxt) {
-      var letters = /^[a-zA-Z]+$/;
-      if ((inputtxt.match(letters))) {
-          return true;
-      } else {
-          return false; 
-      }
-    }
-    var url = "https://media.merriam-webster.com/soundc11/" + subDir + "/" + file + ".wav";
+    var sou = "https://media.merriam-webster.com/soundc11/r/retry01ld.wav";
     setWritenP(writtenPron)
-    setPronounce(url)
+    setPronounce(sou)
   }else{
     var writtenPron= jsonResponse[0].hwi.prs[0].mw;
     var file = jsonResponse[0].hwi.prs[0].sound.audio;
-
+   
     var uniChar = file.slice(0,1);
     var biChar = file.slice(0,2);
     var triChar = file.slice(0,3);
@@ -66,7 +43,6 @@ function Pronunce(props){
        }
      }
     var url = "https://media.merriam-webster.com/soundc11/" + subDir + "/" + file + ".wav";
-  
     setWritenP(writtenPron)
     setPronounce(url)
   }
