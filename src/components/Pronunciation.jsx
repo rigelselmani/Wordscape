@@ -8,8 +8,8 @@ function Pronunce(props){
   .then(response=> response.json())
   .then(jsonResponse =>{
   
-  if(jsonResponse[0]===undefined||jsonResponse[0].hwi===undefined){
-   const writtenPron="try Again"
+  if(jsonResponse[0]===undefined||jsonResponse[0].hwi===undefined||jsonResponse[0]===[]||jsonResponse[0].hwi.prs[0].sound===undefined){
+   const writtenPron="word not found"
      // Logic for subdirectory in order to create url
 
     var sou = "https://media.merriam-webster.com/soundc11/r/retry01ld.wav";
