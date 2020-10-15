@@ -18,7 +18,7 @@ function ImageDisplay(props){
     return <div className="definition">
               <h2 className="displayHead">Image • word</h2>
               <div className="img">
-               <img src={newImage} alt="display-img"/>
+               <img className="imagedisplay" src={newImage} alt="display-img"/>
               </div>
             </div>
 }

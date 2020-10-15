@@ -46,19 +46,23 @@ button{
    padding-top:14px
 }
 .pronounce{
-   padding:5% 0% 3% 0%;
+   padding:6% 0% 3% 0%;
    height:180px;
    width:100%;
    background-color: white;
 }
-img{
-   padding:5% 0% 3% 0%;
-   height:180px;
+.imagedisplay{
+   padding:1% 0% 3% 0%;
+   height:189px;
    width:100%;
 }
 .define{
-   padding:5% 0% 3% 0%;
+   padding:6% 0% 3% 0%;
    background-color: white;
    height:180px;
    width:100%;
+}
+
+.playbutton{
+  margin-top:10%;
 }

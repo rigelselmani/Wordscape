@@ -53,7 +53,7 @@ function Pronunce(props){
              <h2 className="displayHead">Sound • word</h2>
              <div className="pronounce">
                 <p>{writenP}</p>
-                <audio className="play" id="embed_player" src={pronounce} autostart="false" controls="true"></audio>
+                <audio className="playbutton" id="embed_player" src={pronounce} autostart="false" controls="true"></audio>
              </div>
            </div>
 }
