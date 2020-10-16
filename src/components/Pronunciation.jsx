@@ -13,7 +13,7 @@ function Pronunce(props){
    const writtenPron=""
      // Logic for subdirectory in order to create url
 
-    var sou = "https://media.merriam-webster.com/soundc11/r/retry01ld.wav";
+    // var sou = "https://media.merriam-webster.com/soundc11/r/retry01ld.wav";
     setWritenP(writtenPron)
     setPronounce("")
   }else{

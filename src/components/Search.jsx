@@ -1,23 +1,22 @@
 import React,{useState} from "react";
 
 function Search(props){
-    const [word,setWord]=useState();
+    const [word,setWord]=useState({
+        name:""
+    });
+    
     function handleChange(event){
-        const newWord=event.target.value
-        if(newWord===undefined){
-            setWord("hello")
-        }else{
-            setWord(newWord)
-        }
+        const newValue=event.target.value;
+        setWord(newValue)
     }
 
     function handleClick(event){
-        props.onAdd(word);
-     
+        props.onAdd(word.name);
+        setWord({name:""})
         event.preventDefault()
     }
     return <form>
-              <input onChange={handleChange}type="text" placeholder="Search"/>
+              <input onChange={handleChange} type="text" placeholder="word"  name="word" value={word.name}/>
               <button onClick={handleClick}>Search</button>
            </form>
 }
