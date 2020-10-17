@@ -74,6 +74,9 @@ h3{
    height:210px;
    width:100%;
 }
+.p-define{
+    padding:5px;
+}
 .playbutton{
   margin-top:10%;
 }
@@ -98,6 +101,6 @@ textarea{
     height:50px;
     color:white;
     font-size: 1.3rem;
-    margin-bottom:530px;
+    margin-bottom:230px;
     background: linear-gradient(to bottom, #0033cc 0%, #99ccff 100%);
 }
