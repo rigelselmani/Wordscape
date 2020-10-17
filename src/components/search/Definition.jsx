@@ -7,8 +7,8 @@ function Definition(props){
     fetch("https://api.dictionaryapi.dev/api/v2/entries/en/"+props.addText)
     .then(response => response.json())
     .then(jsonResponse =>{
-      if(jsonResponse[0]===undefined){
-        return setDefine("")
+      if(jsonResponse[0]===undefined||jsonResponse[0]==="404"||jsonResponse==={}){
+        return setDefine("Word not found")
       }else{
         return setDefine(jsonResponse[0].meanings[0].definitions[0].definition)
       }

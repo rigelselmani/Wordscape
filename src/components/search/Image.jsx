@@ -9,7 +9,7 @@ function ImageDisplay(props){
     .then(jsonResponse =>{
 
       if(jsonResponse.hits[0]===undefined){
-       setNewImage("")
+       setNewImage("https://netflixroulette.files.wordpress.com/2013/01/image-not-found.gif")
       }else{
        setNewImage(jsonResponse.hits[0].largeImageURL)
       }
