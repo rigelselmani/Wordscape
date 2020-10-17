@@ -1,18 +1,26 @@
-import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import AllSearchPages from './search/AllSearchPages';
-import New from "./New/New";
+import React, { useState } from 'react';
+import Header from "./Header"
+import Search from "./Search";
+import Definition from "./Definition";
+import Image from "./Image";
+import Pronunce from "./Pronunciation";
 
+function AllSearchPages(){
+    const [text,setText]=useState();
+    
+  function handleWord(words){
+     setText(words)
+  }
 
-function App() {
-  
-  return (  <Router>
-              <Switch>
-                <Route path="/" exact component={AllSearchPages} />
-                <Route path="/wordbank" exact component={New} />
-              </Switch>
-            </Router>
-         ) 
+    return <div>
+                <Header />
+                    <Search onAdd={handleWord}/>
+                  <div className="container">
+                    <Definition addText={text}/>
+                    <Image addImg={text}/>
+                    <Pronunce addWord={text}/>
+                  </div>        
+            </div>
 }
 
-export default App;
+export default AllSearchPages;
