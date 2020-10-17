@@ -14,6 +14,7 @@ function Search(props){
         event.preventDefault()
     }
     return <form>
+              <h3>Search a &#8226; word</h3>
               <input onChange={handleChange} type="text"  name="word"/>
               <button className="submit-button" onClick={handleClick}>Search</button>
            </form>
