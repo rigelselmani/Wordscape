@@ -5,7 +5,7 @@ import Definition from "./Definition";
 import Image from "./Image";
 import Pronunce from "./Pronunciation";
 
-function AllSearchPages(){
+function App(){
     const [text,setText]=useState();
     
   function handleWord(words){
@@ -23,4 +23,4 @@ function AllSearchPages(){
             </div>
 }
 
-export default AllSearchPages;
+export default App;
