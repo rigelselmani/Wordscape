@@ -16,7 +16,7 @@ function Search(props){
     return <form>
               <h3>Search a &#8226; word</h3>
               <input onChange={handleChange} value={word} type="text"  name="word"/>
-              <button className="submit-button" onClick={handleClick}>Search</button>
+              <button className="submit-button" value={word} onClick={handleClick}>Search</button>
            </form>
 }
 
