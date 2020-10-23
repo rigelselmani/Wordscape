@@ -4,11 +4,12 @@ function Pronunce(props){
 
   const [writenP,setWritenP]=useState()
   const [pronounce,setPronounce]=useState()
-  
-  fetch("https://www.dictionaryapi.com/api/v3/references/collegiate/json/"+props.addWord+"?key=1f40dde8-50d6-4eb6-9168-6f465c469eb9")
+  if(props.addPronounce===undefined){
+  }else{
+  fetch(props.addPronounce)
   .then(response=> response.json())
   .then(jsonResponse =>{
-  
+ 
   if(jsonResponse==={}||jsonResponse[0]===undefined||jsonResponse[0].hwi===undefined||jsonResponse[0].hwi.prs[0].sound===undefined){
    const writtenPron=""
      // Logic for subdirectory in order to create url
@@ -48,14 +49,14 @@ function Pronunce(props){
     setPronounce(url)
   }
   })
-
+}
     return <div className="definition">
              <h2 className="displayHead">Sound • word</h2>
              <div className="pronounce">
-                <p>{writenP}</p>
-                <p>noun</p>
-                <audio className="playbutton" id="embed_player" src={pronounce} autostart="false" controls="true"></audio>
-             </div>
+                <p className="noun">{writenP===undefined?"Search a word":writenP}</p>
+                <p style={{height:"20px"}}>{writenP===undefined?"":"noun"}</p>
+                <audio className="playButton" src={pronounce}  controls></audio>
+                </div>
            </div>
 }
 

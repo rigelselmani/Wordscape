@@ -57,6 +57,9 @@ h3{
    width:100%;
    padding:20px 10px;
 }
+.container{
+    width:90%;
+}
 .pronounce{
    padding:6% 0% 3% 0%;
    height:200px;
@@ -71,37 +74,19 @@ h3{
 .define{
    padding:6% 0% 1% 0%;
    background-color: white;
-   height:210px;
+   height:200px;
    width:100%;
 }
 .p-define{
-    padding:5px;
+    padding:20px;
 }
-.playbutton{
+audio{
   margin-top:10%;
 }
-.save-head{
-   background: none;
-   text-align: end;
-   color:grey;
-   font-size: 1.1rem;
-   width:100%;
-   padding: 0 5px 0 5px;
-   margin:0;
+.noun{
+    padding-bottom:0;
+    margin-bottom:0;
 }
-textarea{
-    height:180px;
-    width:100%;
-    border:1px solid grey;
-    padding:10px;
-    font-family: Helvetica, sans-serif;
-    font-style: italic;
-}
-.save-term{
-    width:100%;
-    height:50px;
-    color:white;
-    font-size: 1.3rem;
-    margin-bottom:230px;
-    background: linear-gradient(to bottom, #0033cc 0%, #99ccff 100%);
+.playButton{
+    outline:0;
 }
